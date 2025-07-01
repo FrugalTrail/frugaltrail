@@ -115,18 +115,16 @@ const Testimonials = () => {
                           <div className="ms-3" style={{ width: "100%" }}>
                             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                               <h5 className="mb-1 fw-bold">{testimonial.name}</h5>
-                              
                             </div>
-                            {(testimonial.role || testimonial.location) && (
-                              <div style={{ fontSize: "0.95rem", color: "#1ABC9C", fontWeight: 500, display: "flex", alignItems: "center", gap: 8 }}>
+                            {testimonial.role && (
+                              <div style={{ fontSize: "0.95rem", color: "#1ABC9C", fontWeight: 500 }}>
                                 {testimonial.role}
-                                {testimonial.location && (
-                                  <>
-                                    {" "}
-                                    <i className="bi bi-geo-alt-fill" style={{ color: "#1ABC9C", marginRight: 4, marginLeft: 8 }}></i>
-                                    <span style={{ color: "#888", fontWeight: 400 }}>{testimonial.location}</span>
-                                  </>
-                                )}
+                              </div>
+                            )}
+                            {testimonial.location && (
+                              <div style={{ fontSize: "0.92rem", color: "#1ABC9C", display: "flex", alignItems: "center", marginTop: 2 }}>
+                                <i className="bi bi-geo-alt-fill" style={{ color: "red", marginRight: 4 }}></i>
+                                <span style={{ color: "#1ABC9C", fontWeight: 500 }}>{testimonial.location}</span>
                               </div>
                             )}
                           </div>

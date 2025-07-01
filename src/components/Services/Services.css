@@ -1,0 +1,213 @@
+.services {
+    background-color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.title-underline {
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.service-card:hover .service-icon {
+    transform: rotateY(180deg);
+    background: var(--primary-color);
+    color: white;
+}
+
+.service-title {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.service-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.service-card:hover .service-title::after {
+    width: 50px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.service-card:hover .service-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-transparent {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.btn-transparent:hover {
+    transform: translateY(-2px);
+}
+
+.btn-transparent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #005F73;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.btn-transparent:hover::after {
+    width: 80%;
+}
+
+.bi-chevron-down,
+.bi-chevron-up {
+    transition: transform 0.3s ease;
+}
+
+.btn-transparent:hover .bi-chevron-down {
+    transform: translateY(3px);
+}
+
+.btn-transparent:hover .bi-chevron-up {
+    transform: translateY(-3px);
+}
+
+/* Update view more button styles */
+.view-more-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transition: var(--transition);
+    position: relative;
+}
+
+.view-more-btn:hover {
+    transform: translateY(-2px);
+    background: var(--primary-color);
+    color: white;
+}
+
+.view-more-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #1ABC9C;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.view-more-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover i.bi-chevron-down {
+    transform: translateY(3px);
+}
+
+.view-more-btn:hover i.bi-chevron-up {
+    transform: translateY(-3px);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@media (max-width: 991px) {
+    .service-card {
+        margin-bottom: 2rem;
+    }
+
+    .service-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

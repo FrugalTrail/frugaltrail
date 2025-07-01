@@ -122,9 +122,9 @@ const Testimonials = () => {
                               </div>
                             )}
                             {testimonial.location && (
-                              <div style={{ fontSize: "0.92rem", color: "#1ABC9C", display: "flex", alignItems: "center", marginTop: 2 }}>
+                              <div style={{ fontSize: "0.7rem", color: "#343A40", display: "flex", alignItems: "center", marginTop: 2 }}>
                                 <i className="bi bi-geo-alt-fill" style={{ color: "red", marginRight: 4 }}></i>
-                                <span style={{ color: "#1ABC9C", fontWeight: 500 }}>{testimonial.location}</span>
+                                <span style={{ color: "#343A40", fontWeight: 500 }}>{testimonial.location}</span>
                               </div>
                             )}
                           </div>

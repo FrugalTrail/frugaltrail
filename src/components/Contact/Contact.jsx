@@ -32,7 +32,7 @@ const Contact = () => {
     }).then(() => {
       setShowSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
-      setTimeout(() => setShowSuccess(false), 6000); // Show success for 6 seconds
+      setTimeout(() => setShowSuccess(false), 10000); // Show success for 6 seconds
     }).catch(() => {
       setFormStatus({
         show: true,
